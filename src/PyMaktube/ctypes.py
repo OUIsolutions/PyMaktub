@@ -13,9 +13,10 @@ path = dirname(abspath(__file__))
 # create shared library
 if os_name == 'Windows':
     clib_path = f'{path}\\../bin/Maktub.dll'
-else:
+elif os_name == "Linux":
     clib_path = f'{path}/../bin/Maktub.so'
-
+else:
+    raise Exception("Plataform not supported")
 
 
 loader =ctypes.CDLL(clib_path)
