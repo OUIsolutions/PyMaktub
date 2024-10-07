@@ -1,24 +1,29 @@
 from setuptools import setup, find_packages
 
+# Leitura do README.md garantindo o fechamento do arquivo
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name='PyMakTub',
     version='0.1.0',
-    packages=find_packages(where='src'),
-    package_dir={'': 'src'},
-    include_package_data=True,  # Necessário para incluir dados extras
+    packages=find_packages(where='src'),  # Procurar pacotes no diretório 'src'
+    package_dir={'': 'src'},  # Define 'src' como o diretório raiz para pacotes
+    include_package_data=True,  # Inclui dados extras como arquivos binários e outros
 
     package_data={
-        '': ['*.py'],
-        'src/bin': ['src/bin/Maktub.so'],
-
+        '': ['*.py'],  # Inclui todos os arquivos .py de qualquer pacote
+        'bin': ['bin/Maktub.so'],  # Inclui o arquivo binário específico
     },
-    install_requires=[],
+
+    install_requires=[],  # Lista de dependências, adicione conforme necessário
     author='Mateus',
     author_email='mateusmoutinho01@gmail.com',
-    description='An Procedural Generation  Python Lib',
-    long_description=open('README.md').read(),
+    description='A Procedural Generation Python Lib',
+    long_description=long_description,  # Descrição longa lida do README.md
     long_description_content_type='text/markdown',
-    url='seu git',  # URL do repositório
+    url='https://github.com/seuusuario/seurepositorio',  # Coloque a URL correta do seu repositório Git
+
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
