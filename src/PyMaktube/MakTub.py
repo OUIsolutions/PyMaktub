@@ -1,5 +1,6 @@
 from typing_extensions import List
 from .ctypes import loader
+from .MakTubSeqs import MakTubSeqs
 import ctypes
 
 class MakTub:
@@ -41,6 +42,9 @@ class MakTub:
     def get_seed(self):
         return loader.MakTub_get_seed(self.c_object).decode()
 
+
+    def generate_token(self,size:int=10,valid_chars:str=MakTubSeqs.ALFHA_NUNS):
+        return loader.MakTub_generate_token(self.c_object,size,valid_chars.encode("utf-8")).decode()
 
 
     def generate_num(self,start:int,end:int):
