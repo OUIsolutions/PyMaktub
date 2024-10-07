@@ -9,7 +9,7 @@ setup(
 
     package_data={
         '': ['*.py'],
-        'bin': ['Maktub.so'],
+        'src/bin': ['src/bin/Maktub.so'],
 
     },
     install_requires=[],
