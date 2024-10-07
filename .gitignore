@@ -12,6 +12,7 @@
 *.map
 *.exp
 __pycache__*
+teste
 # Precompiled Headers
 *.gch
 *.pch
