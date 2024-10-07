@@ -11,7 +11,7 @@
 *.ilk
 *.map
 *.exp
-
+__pycache__*
 # Precompiled Headers
 *.gch
 *.pch
@@ -24,7 +24,6 @@
 
 # Shared objects (inc. Windows DLLs)
 *.dll
-*.so
 *.so.*
 *.dylib
 

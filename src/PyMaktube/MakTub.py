@@ -1,3 +1,4 @@
+from typing import Any
 from typing_extensions import List
 
 from .Probabilitys import Probability
@@ -21,6 +22,7 @@ class MakTub:
         )
 
 
+
     def aply_seed_modification(self,positions:List[int],valid_chars:str=MakTubSeqs.ALFHA_NUNS):
         positions_size = len(positions)
         array = (ctypes.c_int * positions_size)()
@@ -39,10 +41,19 @@ class MakTub:
         return self.get_seed()
 
 
+    def get_generation(self)->int:
+        return loader.MakTub_get_generation(self.c_object)
 
+
+    def set_generation(self,generation:int):
+        loader.MakTub_set_generation(self.c_object,generation)
 
     def get_seed(self):
         return loader.MakTub_get_seed(self.c_object).decode()
+
+    def choice(self,values:List[Any])->Any:
+        choose = self.generate_num(0,len(values)-1)
+        return values[choose]
 
     #generators
     def new_probability(self):

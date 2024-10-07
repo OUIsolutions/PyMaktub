@@ -46,6 +46,11 @@ loader.MakTub_generate_token.restype = ctypes.c_char_p
 
 loader.MakTub_free.argtypes = [ctypes.c_void_p]
 
+loader.MakTub_set_generation.argtypes = [ctypes.c_void_p,ctypes.c_int]
+
+
+loader.MakTub_get_generation.argtypes = [ctypes.c_void_p]
+loader.MakTub_get_generation.restype = ctypes.c_int
 
 #Num Generation
 loader.MakTub_newGenerationNum.argtypes = [ctypes.c_void_p]
