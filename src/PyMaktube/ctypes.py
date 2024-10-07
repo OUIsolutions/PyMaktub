@@ -12,9 +12,9 @@ path = dirname(abspath(__file__))
 
 # create shared library
 if os_name == 'Windows':
-    clib_path = f'{path}\\bin/Maktub.dll'
+    clib_path = f'{path}\\Maktub.dll'
 elif os_name == "Linux":
-    clib_path = f'{path}/bin/Maktub.so'
+    clib_path = f'{path}/Maktub.so'
 else:
     raise Exception("Plataform not supported")
 
