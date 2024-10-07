@@ -1,4 +1,6 @@
 from typing_extensions import List
+
+from .Probabilitys import Probability
 from .ctypes import loader
 from .MakTubSeqs import MakTubSeqs
 import ctypes
@@ -19,7 +21,7 @@ class MakTub:
         )
 
 
-    def aply_seed_modification(self,positions:List[int],valid_chars:str):
+    def aply_seed_modification(self,positions:List[int],valid_chars:str=MakTubSeqs.ALFHA_NUNS):
         positions_size = len(positions)
         array = (ctypes.c_int * positions_size)()
         for i in range(positions_size):
@@ -42,8 +44,12 @@ class MakTub:
     def get_seed(self):
         return loader.MakTub_get_seed(self.c_object).decode()
 
+    #generators
+    def new_probability(self):
+        obj = loader.MakTub_newGenerationNum(self.c_object)
+        return Probability(obj)
 
-    def generate_token(self,size:int=10,valid_chars:str=MakTubSeqs.ALFHA_NUNS):
+    def generate_token(self,size:int=10,valid_chars:str=MakTubSeqs.ALFHA_NUNS)->str:
         return loader.MakTub_generate_token(self.c_object,size,valid_chars.encode("utf-8")).decode()
 
 

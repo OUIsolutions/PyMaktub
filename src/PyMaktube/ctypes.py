@@ -45,3 +45,14 @@ loader.MakTub_generate_token.argtypes = [ctypes.c_void_p,ctypes.c_int,ctypes.c_c
 loader.MakTub_generate_token.restype = ctypes.c_char_p
 
 loader.MakTub_free.argtypes = [ctypes.c_void_p]
+
+
+#Num Generation
+loader.MakTub_newGenerationNum.argtypes = [ctypes.c_void_p]
+loader.MakTub_newGenerationNum.restype = ctypes.c_void_p
+
+loader.MaktubGenerationNum_add_probability.argtypes = [ctypes.c_void_p,ctypes.c_double]
+loader.MaktubGenerationNum_add_probability.restype = ctypes.c_int
+
+loader.MaktubGenerationNum_perform.argtypes = [ctypes.c_void_p]
+loader.MaktubGenerationNum_perform.restype = ctypes.c_int
