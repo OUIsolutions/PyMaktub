@@ -87,3 +87,27 @@ print("generation ",r.get_generation())
 ```
 ### Modifiyng the Seed 
 its possible to modify the seed , to test diferent results
+```py 
+
+from PyMaktube.MakTub import MakTub
+
+r = MakTub("your seed here")
+for i in range(0,10):
+    r.set_seed(f'test {i}')
+    print(r.generate_token())
+
+```
+
+### Making randon seed modifications 
+
+```py
+
+
+from PyMaktube.MakTub import MakTub
+from PyMaktube.MakTubSeqs import MakTubSeqs
+r = MakTub("your seed here")
+for i in range(0,10):
+    r.aply_seed_modification([0,1,2],MakTubSeqs.ALFHA_NUNS)#will modfiy the first 3 chars
+    print(r.get_seed())
+
+```
