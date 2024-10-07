@@ -1,8 +1,7 @@
 
 
-from src.PyMaktube.ctypes import *
-#msg = "cvcvggggcfgf"
+from src.PyMaktube.MakTub import MakTub
 
-#obj =loader.newMakTub("%s".encode("utf-8"),msg.encode("utf-8"))
-#i = loader.Maktub_generate_num(obj,0,100)
-#print(i)
+m = MakTub("f332dd3")
+m.aply_seed_modification([0,1,2],"123")
+print(m.get_seed())

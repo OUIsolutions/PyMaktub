@@ -24,6 +24,19 @@ loader.newMakTub.argtypes  = [ctypes.c_char_p]
 loader.newMakTub.restype = ctypes.c_void_p
 
 
+loader.MakTub_set_seed.argtypes = [ctypes.c_void_p,ctypes.c_char_p]
+
+loader.MakTub_aply_seed_modification.argtypes = [
+    ctypes.c_void_p,
+    ctypes.POINTER(ctypes.c_int),
+    ctypes.c_int,
+    ctypes.c_char_p
+]
+
+loader.MakTub_get_seed.argtypes = [ctypes.c_void_p]
+loader.MakTub_get_seed.restype = ctypes.c_char_p
+
+
 #Maktub Obj
 loader.Maktub_generate_num.argtypes = [ctypes.c_void_p,ctypes.c_long,ctypes.c_long]
 loader.Maktub_generate_num.restype = ctypes.c_longlong
