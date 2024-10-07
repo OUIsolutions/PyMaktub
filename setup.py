@@ -15,7 +15,7 @@ setup(
         '': ['*.py'],  # Inclui todos os arquivos .py de qualquer pacote
     },
 
-    data_files=[('.bin', ['src/bin/Maktub.so'])],
+    data_files=[('bin', ['src/bin/Maktub.so'])],
     install_requires=[],  # Lista de dependências, adicione conforme necessário
     author='Mateus',
     author_email='mateusmoutinho01@gmail.com',
