@@ -43,7 +43,7 @@ print(r.generate_token(size,valid_chars))
 ```
 
 ### Probabilitys 
-```
+```py
 from PyMaktube.MakTub import MakTub
 r = MakTub("your seed here")
 p = r.new_probability()
@@ -59,3 +59,31 @@ if c == result:
     print("generated C")
 ```
 
+### Multiple Generations 
+you can generate any itens you want with the same seed 
+
+```py 
+from PyMaktube.MakTub import MakTub
+
+r = MakTub("your seed here")
+
+for i in range(0,100):
+    print(r.generate_num(0,100))
+
+```
+
+### skping generation 
+you also can skip genrations easly 
+
+```py
+from PyMaktube.MakTub import MakTub
+
+r = MakTub("your seed here")
+r.set_generation(5)# will skip the first 5
+for i in range(0,100):
+    print(r.generate_num(0,100))
+print("generation ",r.get_generation())
+
+```
+### Modifiyng the Seed 
+its possible to modify the seed , to test diferent results
