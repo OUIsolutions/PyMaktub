@@ -12,7 +12,7 @@ setup(
     include_package_data=True,  # Inclui dados extras como arquivos binários e outros
 
     package_data={
-        '': ['*.py',"*.so"],  # Inclui todos os arquivos .py de qualquer pacote
+        '': ['*.py',"*.so","*.dll"],  # Inclui todos os arquivos .py de qualquer pacote
     },
 
     #ata_files=[('bin', ['src/bin/Maktub.so'])],
