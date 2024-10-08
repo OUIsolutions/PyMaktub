@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='PyMakTub',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(where='src'),  # Procurar pacotes no diretório 'src'
     package_dir={'': 'src'},  # Define 'src' como o diretório raiz para pacotes
     include_package_data=True,  # Inclui dados extras como arquivos binários e outros
