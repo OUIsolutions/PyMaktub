@@ -8,6 +8,7 @@ pip install git+https://github.com/OUIsolutions/PyMaktube
 
 ```
 
+
 ### Quick Usage 
 For making anything on Maktub , first you need to setup a seed, than you can generate
 numbers, itens ,choices , etc

@@ -16,6 +16,7 @@ teste
 # Precompiled Headers
 *.gch
 *.pch
+dist/*
 
 # Libraries
 *.lib
