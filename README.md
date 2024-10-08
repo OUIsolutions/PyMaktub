@@ -1,12 +1,19 @@
 # PyMaktube
 a Python Library for Procedural Pseudo Randon Generation
 
-Instalation,for instalation just type:
+### Instalation from pip
+```shel 
+pip install PyMakTub
+```
+
+### Instalation from github
 
 ```shel 
 pip install git+https://github.com/OUIsolutions/PyMaktube
 
 ```
+
+
 
 
 ### Quick Usage 
