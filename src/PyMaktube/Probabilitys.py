@@ -1,8 +1,7 @@
 
 import ctypes
-from typing_extensions import Callable, List, Union
 from .ctypes import loader
-
+from typing import Union
 class Probability:
 
     def __init__(self,generation_object:ctypes.c_void_p) -> None:

@@ -1,5 +1,5 @@
 from typing import Any
-from typing_extensions import List
+from typing import List
 
 from .Probabilitys import Probability
 from .ctypes import loader

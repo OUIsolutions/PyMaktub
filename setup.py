@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='PyMakTub',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(where='src'),  # Procurar pacotes no diretório 'src'
     package_dir={'': 'src'},  # Define 'src' como o diretório raiz para pacotes
     include_package_data=True,  # Inclui dados extras como arquivos binários e outros
@@ -17,7 +17,6 @@ setup(
 
     #ata_files=[('bin', ['src/bin/Maktub.so'])],
     install_requires=[
-        "typing_extensions"
     ],  # Lista de dependências, adicione conforme necessário
     author='Mateus',
     author_email='mateusmoutinho01@gmail.com',
