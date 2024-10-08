@@ -16,7 +16,9 @@ setup(
     },
 
     #ata_files=[('bin', ['src/bin/Maktub.so'])],
-    install_requires=[],  # Lista de dependências, adicione conforme necessário
+    install_requires=[
+        "typing_extensions"
+    ],  # Lista de dependências, adicione conforme necessário
     author='Mateus',
     author_email='mateusmoutinho01@gmail.com',
     description='A Procedural Generation Python Lib',
